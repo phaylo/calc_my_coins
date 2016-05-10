@@ -12,7 +12,7 @@
 
 # You can also replace ':' with any single-character as a token.
 # But by doing so, you must give the new token as an argument.
-# Some tokens are reserved. Thet are: 'w', 'f', '#' and the digits from 0 to 9
+# Some tokens are reserved. They are: 'w', 'f', '#' and the digits from 0 to 9
 
 # Every line starts with '#' is a comment.
 # Inline comments are the only supported comments.
