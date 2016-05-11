@@ -223,13 +223,14 @@ if __name__ == "__main__":
 
 	# Catch any known errors
 	except (
-			FileNotFoundError,
-			ParseError,
-			ReservedTokenError,
-			InvalidTypeError,
-			InvalidAmountError,
-			InvalidDenominationError,
-			NaNError) as err:
+		FileNotFoundError,
+		ParseError,
+		ReservedTokenError,
+		InvalidTypeError,
+		InvalidAmountError,
+		InvalidDenominationError,
+		NaNError
+		) as err:
 		print err.message,
 
 	# Not a known error? let the default handler handle it
