@@ -126,12 +126,12 @@ def calc_coins(coin_file = FILE, token = TOKEN):
 			# Parse the file and get the info
 			tl_info = temp.split(token)
 
-            # Wrong structure?
+			# Wrong structure?
 			if len(tl_info) != 3:
 				line_num += 1  
 				raise ParseError("Invalid syntax --> [" + str(line_num - 1) + "] " + line)
 
-            # Get the denomination, amount and type of a coin
+			# Get the denomination, amount and type of a coin
 			tl_denomination = tl_info[0]
 			tl_amount = tl_info[1]
 			tl_type = tl_info[2]
@@ -173,7 +173,6 @@ def calc_coins(coin_file = FILE, token = TOKEN):
 
 			# Protect from a nasty "nan" exploit... (one could write 'nan' as denomination)
 			if result == float('nan'):
-				line_num += 1  
 				raise NaNError("One or more denomination IS a nan literally...")
 
 			# Increment line_num
@@ -223,13 +222,14 @@ if __name__ == "__main__":
 			print "         'calc_my_coins.py' (default file is 'coins'and token is ':')"
 
 	# Catch any known errors
-	except (FileNotFoundError,
-		    ParseError,
-		    ReservedTokenError,
-		    InvalidTypeError,
-		    InvalidAmountError,
-		    InvalidDenominationError,
-		    NaNError) as err:
+	except (
+			FileNotFoundError,
+			ParseError,
+			ReservedTokenError,
+			InvalidTypeError,
+			InvalidAmountError,
+			InvalidDenominationError,
+			NaNError) as err:
 		print err.message,
 
 	# Not a known error? let the default handler handle it
