@@ -19,11 +19,12 @@
 # You can also have a valid expressions followed by a comment in a line.
 
 # White spaces are ignored
+# But each info must be in a new line
 
 
 # Actual info
-1  : 74 : w  # 74
-50 : 9  : f  # 4.5
-25 : 27 : f  # 6.75
-10 : 15 : f  # 1.5
-5  : 15 : f  # 0.75
+1  : 74 : w  # Total: 74
+50 : 9  : f  # Total: 4.5
+25 : 27 : f  # Total: 6.75
+10 : 15 : f  # Total: 1.5
+5  : 15 : f  # Total: 0.75
